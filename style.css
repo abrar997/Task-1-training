@@ -926,7 +926,7 @@ body {
 .mobile-nav ul li a:hover {
   color: rgba(239, 237, 237, 0.764);
 }
-@media screen and (min-width: 330px) and (max-width: 600px) {
+@media screen and (min-width: 250px) and (max-width: 500px) {
   .site-header .site-header-menu {
     padding: 8px 12px;
     width: 100%;
@@ -1060,8 +1060,9 @@ body {
   }
   .section-friendliest .friendliest-visual-text {
     bottom: -74px;
-    left: 8px;
-    width: 87%;
+    left: 0px;
+    right: 0px;
+    width: 100%;
     right: 12px;
     padding: 28px 20px;
     gap: 10px;
@@ -1263,7 +1264,10 @@ body {
     gap: 20px;
     flex-direction: column;
   }
-
+  .customerSay-section .customer-details .customer-info .customer-navigation {
+    margin-left: auto;
+    gap: 8px;
+  }
   .site-footer {
     padding-inline: var(--inline-mobile-padding);
     padding-block: 40px;
@@ -1288,10 +1292,10 @@ body {
     padding: 10px 12px;
     background: #ffbb1c;
     border-radius: 40px;
-    right: -10px;
+    right: 4px;
     height: 42px;
     top: 3.5px;
-    font-size: 16px;
+    font-size: 12px;
   }
   .site-footer .footer-bottom {
     display: flex;
