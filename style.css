@@ -6,13 +6,13 @@
   --main-padding: 16px 150px;
   --fontSize-title: 42px;
   --fontSize-text: 18px;
+  --fontSize-title-mobile: 32px;
   --button-color: #2a3334;
   --padding-inline: 150px;
   --padding-block: 80px;
   --background-card-color: rgba(60, 171, 144, 0.05);
   --inline-mobile-padding: 12px;
   --block-mobile-padding: 22px;
-  --fontSize-title-mobile: 36px;
   --gray-color: #475467;
   --white-color: #fff;
   --dark-blue-color: #101828;
@@ -35,6 +35,7 @@
 body {
   font-family: "Inter", sans-serif;
 }
+
 /* Buttons */
 .btn-card {
   background-color: transparent;
@@ -51,7 +52,7 @@ body {
 }
 
 /* Header */
-.site-header {
+.site-header .site-header-menu {
   background-color: var(--main-color);
   padding: var(--main-padding);
   color: var(--white-color);
@@ -63,7 +64,7 @@ body {
   height: fit-content;
   max-height: 86px;
 }
-.mobile-btn {
+.site-header .header-icons .mobile-btn {
   background-color: transparent;
   border: none;
   font-size: 20px;
@@ -71,21 +72,22 @@ body {
   display: none;
 }
 
-.site-header .site-header-logo {
+.site-header .site-header-menu .site-header-logo {
   background: url("./assets/images/logo.png");
-  width: 100%;
+  width: 120px;
   height: 54px;
   mix-blend-mode: multiply;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.site-header .site-header-nav {
+.site-header .site-header-menu .site-header-nav {
   display: flex;
   gap: 1px;
   box-sizing: border-box;
 }
 
-.site-header .site-header-nav {
+.site-header .site-header-menu .site-header-nav {
   list-style: none;
   padding: 0px;
   white-space: nowrap;
@@ -93,7 +95,7 @@ body {
   gap: 1px;
 }
 
-.site-header .site-header-nav li a {
+.site-header .site-header-menu .site-header-nav li a {
   text-decoration: none;
   color: var(--white-color);
   padding: 8px 28px;
@@ -101,16 +103,16 @@ body {
   font-weight: 400;
   width: 100%;
 }
-.site-header .site-header-nav li a:hover {
+.site-header .site-header-menu .site-header-nav li a:hover {
   background-color: var(--nav-color);
   border-bottom: 3px solid #0000004d;
   font-weight: var(--font-weight-semibold);
 }
-.site-header .site-header-nav li a:focus {
+.site-header .site-header-menu .site-header-nav li a:focus {
   background-color: var(--nav-color);
 }
 
-.site-header .site-header-contact {
+.site-header .site-header-menu .site-header-contact {
   display: grid;
   gap: 4px;
   align-items: end;
@@ -119,10 +121,10 @@ body {
   white-space: nowrap;
 }
 
-.site-header .site-header-contact span:nth-child(1) {
+.site-header .site-header-menu .site-header-contact span:nth-child(1) {
   margin-left: auto;
 }
-.site-header .site-header-contact span:nth-child(2) {
+.site-header .site-header-menu .site-header-contact span:nth-child(2) {
   font-weight: 700;
   letter-spacing: 0.94;
 }
@@ -893,20 +895,47 @@ body {
   color: #92989f;
 }
 .mobile-nav {
-  background-color: #0a8678;
+  background-color: var(--main-color);
   width: 100%;
-  color: white;
+  color: var(--white-color);
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+  position: absolute;
+  z-index: 10;
+  height: 0px;
+  left: 0px;
+  top: 85px;
+  opacity: 0;
+  transition: height 0.3s ease-in, opacity 0.3s ease-in;
+  overflow: hidden;
 }
-@media screen and (min-width: 330px) and (max-width: 420px) {
-  .site-header {
+
+.mobile-nav ul {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.mobile-nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+}
+
+.mobile-nav ul li a:hover {
+  color: rgba(239, 237, 237, 0.764);
+}
+@media screen and (min-width: 330px) and (max-width: 600px) {
+  .site-header .site-header-menu {
     padding: 8px 12px;
     width: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
   }
-  .header-icons {
+
+  .site-header .header-icons {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -919,13 +948,21 @@ body {
     background-position: center;
   }
 
-  .mobile-btn {
+  .site-header .header-icons .mobile-btn {
     display: flex;
   }
+  .site-header .header-icons .mobile-btn:hover ~ .mobile-nav {
+    padding: 0px;
+    margin: 0px;
+    left: 0px;
+    height: 220px;
+    opacity: 1;
+  }
 
-  .site-header nav {
+  .site-header .site-header-menu nav:nth-child(2) {
     display: none;
   }
+
   .site-header .site-header-contact {
     display: none;
   }
