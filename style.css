@@ -892,22 +892,38 @@ body {
   letter-spacing: 0.257143px;
   color: #92989f;
 }
+.mobile-nav {
+  background-color: #0a8678;
+  width: 100%;
+  color: white;
+}
 @media screen and (min-width: 330px) and (max-width: 420px) {
   .site-header {
     padding: 8px 12px;
     width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
+  .header-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
   .site-header .site-header-logo {
     height: 44px;
+    width: 80px;
     background-position: center;
   }
 
   .mobile-btn {
-    display: block;
-    box-sizing: border-box;
+    display: flex;
   }
 
-  .site-header .site-header-nav {
+  .site-header nav {
     display: none;
   }
   .site-header .site-header-contact {
