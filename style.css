@@ -1308,8 +1308,14 @@ body {
     display: flex;
     text-transform: capitalize;
     flex-wrap: wrap;
+    gap: 8px;
+    align-items: start;
   }
   .site-footer .footer-bottom .footer-links a {
-    padding-inline: 14px;
+    padding-inline: 10px;
+  }
+  .site-footer .footer-bottom .footer-links a:last-child {
+    padding-inline: 0px;
+    border-right: none;
   }
 }
