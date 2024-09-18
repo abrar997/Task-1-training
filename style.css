@@ -916,6 +916,7 @@ body {
   gap: 8px;
   display: flex;
   flex-direction: column;
+  list-style: none;
 }
 .mobile-nav ul li a {
   color: var(--white-color);
