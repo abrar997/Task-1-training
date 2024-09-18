@@ -1125,7 +1125,7 @@ body {
 
   .repairs-section .repairs-background img {
     height: fit-content;
-    min-height: 350px;
+    min-height: 320px;
   }
   .repairs-section .repairs-background .repairs-content {
     width: 100%;
@@ -1135,7 +1135,8 @@ body {
     text-align: left;
     justify-content: center;
     align-items: start;
-    padding: 24px 12px;
+    padding: 8px 12px;
+    height: 100%;
   }
   .repairs-section .repairs-background .repairs-content h1 {
     font-size: var(--fontSize-title-mobile);
@@ -1143,7 +1144,7 @@ body {
   }
   .repairs-section .repairs-background .repairs-content p {
     width: 100%;
-    height: 140px;
+    height: 100%;
     font-weight: 400;
     font-size: 16px;
   }
