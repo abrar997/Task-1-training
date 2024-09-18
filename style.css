@@ -989,7 +989,7 @@ body {
   }
   .hero-section .hero-background img {
     height: fit-content;
-    min-height: 380px;
+    min-height: 400px;
   }
   .hero-section .hero-slider {
     gap: 15px;
