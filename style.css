@@ -70,22 +70,6 @@ body {
   font-size: 22px;
   color: #eee;
   display: none;
-  border: 3px solid #eee;
-  width: 40px;
-  height: 40px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.site-header .site-header-menu .site-header-logo {
-  background: url("./assets/images/logo.png");
-  width: 120px;
-  height: 54px;
-  mix-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .site-header .site-header-menu .site-header-nav {
@@ -527,7 +511,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  width: 310.67px;
   height: 106px;
   background: rgba(60, 171, 144, 0.15);
   border-radius: 10px;
@@ -535,7 +518,7 @@ body {
 .energy-section .energy-cards-container .energy-card .energy-card-image span {
   width: 225px;
   height: 49px;
-  background: url("./assets/images/logo.png");
+  background: url(./assets/images/logo.png);
   mix-blend-mode: luminosity;
   background-repeat: no-repeat;
   background-position: center;
@@ -698,7 +681,6 @@ body {
   align-items: center;
 }
 .customerSay-section .customer-details .customer-details-header h2 {
-  /* font-family: "Plus Jakarta Sans"; */
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
@@ -813,14 +795,7 @@ body {
   display: flex;
   gap: 40px;
 }
-.site-footer .footer-top .footer-contents-brand {
-  background: url("./assets/icons/logo.svg");
-  mix-blend-mode: luminosity;
-  width: 185px;
-  height: 64px;
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
+
 .site-footer .footer-contents .footer-info a {
   color: var(--white-color);
   text-decoration: none;
@@ -833,6 +808,7 @@ body {
 .site-footer .footer-contact {
   display: grid;
   gap: 10px;
+  width: auto;
 }
 .site-footer .footer-contact p {
   font-weight: 400;
@@ -854,6 +830,7 @@ body {
   border: 1px solid #b3bdc7;
   border-radius: 38px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .site-footer .footer-contact form button {
@@ -901,6 +878,7 @@ body {
   letter-spacing: 0.257143px;
   color: #92989f;
 }
+
 .mobile-nav {
   background-color: var(--main-color);
   width: 100%;
@@ -933,7 +911,7 @@ body {
 .mobile-nav ul li a:hover {
   color: rgba(239, 237, 237, 0.764);
 }
-@media screen and (min-width: 250px) and (max-width: 768px) {
+@media screen and (min-width: 250px) and (max-width: 766px) {
   .site-header .site-header-menu {
     padding: 8px 12px;
     width: 100%;
@@ -948,11 +926,7 @@ body {
     align-items: center;
     width: 100%;
     padding-block: 10px;
-  }
-
-  .site-header .site-header-menu .site-header-logo {
-    width: 80px;
-    background-position: center;
+    justify-items: center;
   }
 
   .site-header .header-icons .mobile-btn {
@@ -1024,12 +998,12 @@ body {
   .hero-section .hero-content .next-text_buttons .btn-call,
   .btn-request {
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-section .hero-content .next-text_buttons .btn-request {
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .section-friendliest {
     padding: var(--block-mobile-padding) var(--inline-mobile-padding);
@@ -1059,16 +1033,12 @@ body {
     gap: 10px;
     font-size: 16px;
   }
+
   .section-friendliest .friendliest-visual .friendliest-background-image {
-    margin: auto;
+    width: 100%;
     height: 350px;
   }
 
-  .section-friendliest .friendliest-visual .friendliest-background-image {
-    margin: auto;
-    width: 100%;
-    height: 100%;
-  }
   .section-friendliest .friendliest-visual-text {
     bottom: -74px;
     left: 0px;
@@ -1108,7 +1078,7 @@ body {
   }
   .section-power .power-content button {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .section-solar {
     padding: var(--block-mobile-padding) var(--inline-mobile-padding);
@@ -1280,7 +1250,7 @@ body {
   .site-footer {
     padding-inline: var(--inline-mobile-padding);
     padding-block: 40px;
-    gap: 40px;
+    gap: 30px;
   }
   .site-footer .footer-top {
     display: flex;
@@ -1288,10 +1258,20 @@ body {
     gap: 20px;
     align-items: start;
   }
+  .site-footer .footer-top .footer-contents {
+    gap: 10px;
+  }
   .site-footer .footer-top .footer-info {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+  }
+  .site-footer .footer-contact {
+    gap: 10px;
+    width: 100%;
+  }
+  .site-footer .footer-contact p {
+    color: rgb(210, 210, 210);
   }
   .site-footer .footer-contact form input {
     padding: 0px 0px 0px 12px;
@@ -1304,7 +1284,7 @@ body {
     right: 4px;
     height: 42px;
     top: 3.5px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .site-footer .footer-bottom {
     display: flex;
@@ -1328,7 +1308,7 @@ body {
     border-right: none;
   }
 }
-@media screen and (min-width: 786) and (max-width: 1024px) {
+@media screen and (min-width: 766px) and (max-width: 1024px) {
   .site-header .site-header-menu {
     padding: 8px 12px;
     width: 100%;
@@ -1343,12 +1323,6 @@ body {
     align-items: center;
     width: 100%;
     padding-block: 10px;
-  }
-
-  .site-header .site-header-logo {
-    height: 44px;
-    width: 80px;
-    background-position: center;
   }
 
   .site-header .header-icons .mobile-btn {
@@ -1416,12 +1390,12 @@ body {
   .hero-section .hero-content .next-text_buttons .btn-call,
   .btn-request {
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .hero-section .hero-content .next-text_buttons .btn-request {
     padding: 8px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .section-friendliest {
     padding: var(--block-mobile-padding) var(--inline-mobile-padding);
@@ -1451,16 +1425,13 @@ body {
     gap: 10px;
     font-size: 16px;
   }
-  .section-friendliest .friendliest-visual .friendliest-background-image {
-    margin: auto;
-    height: 350px;
-  }
 
   .section-friendliest .friendliest-visual .friendliest-background-image {
-    margin: auto;
     width: 100%;
-    height: 100%;
+    min-height: 450px;
+    object-fit: cover;
   }
+
   .section-friendliest .friendliest-visual-text {
     bottom: -74px;
     left: 0px;
@@ -1473,6 +1444,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: end;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
   }
   .section-power {
     margin-top: 80px;
@@ -1500,7 +1473,7 @@ body {
   }
   .section-power .power-content button {
     padding: 6px 12px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .section-solar {
     padding: var(--block-mobile-padding) var(--inline-mobile-padding);
@@ -1535,7 +1508,7 @@ body {
     gap: 12px;
     border-radius: 0px;
     text-align: left;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     padding: 24px 12px;
   }
@@ -1679,6 +1652,11 @@ body {
     gap: 20px;
     align-items: start;
   }
+
+  .site-footer .footer-contact {
+    gap: 6px;
+    width: 100%;
+  }
   .site-footer .footer-top .footer-info {
     display: flex;
     gap: 12px;
@@ -1695,7 +1673,7 @@ body {
     right: 4px;
     height: 42px;
     top: 3.5px;
-    font-size: 12px;
+    font-size: 14px;
   }
   .site-footer .footer-bottom {
     display: flex;
