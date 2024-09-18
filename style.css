@@ -67,7 +67,7 @@ body {
 .site-header .header-icons .mobile-btn {
   background-color: transparent;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   color: var(--white-color);
   display: none;
 }
@@ -898,7 +898,6 @@ body {
   background-color: var(--main-color);
   width: 100%;
   color: var(--white-color);
-  padding: 20px 0px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -914,7 +913,7 @@ body {
 }
 
 .mobile-nav ul {
-  gap: 8px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -943,8 +942,7 @@ body {
     padding-block: 10px;
   }
 
-  .site-header .site-header-logo {
-    height: 44px;
+  .site-header .site-header-menu .site-header-logo {
     width: 80px;
     background-position: center;
   }
@@ -952,18 +950,20 @@ body {
   .site-header .header-icons .mobile-btn {
     display: flex;
   }
+  .mobile-nav p {
+    font-weight: 600;
+    color: rgb(228, 228, 228);
+  }
   .site-header .header-icons .mobile-btn:hover ~ .mobile-nav {
-    padding: 0px;
+    padding: 10px;
     margin: 0px;
     left: 0px;
     height: 220px;
     opacity: 1;
   }
-
   .site-header .site-header-menu nav:nth-child(2) {
     display: none;
   }
-
   .site-header .site-header-contact {
     display: none;
   }
