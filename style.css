@@ -9,12 +9,11 @@
   --fontSize-title-mobile: 32px;
   --button-color: #2a3334;
   --padding-inline: 150px;
-  --main-padding-xLarge: 80px 150px;
+  --main-padding: 80px 150px;
   --background-card-color: rgba(60, 171, 144, 0.05);
   --inline-mobile-padding: 22px;
   --block-mobile-padding: 22px;
   --nav-padding-large: 16px 150px;
-  --main-padding-large: 80px 150px; /* padding for large screens*/
   --gray-color: #475467;
   --white-color: #fff;
   --dark-blue-color: #101828;
@@ -221,7 +220,7 @@ body {
 
 /* Friendliest-section */
 .section-friendliest {
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 72.52px;
@@ -270,17 +269,23 @@ body {
 .section-friendliest .friendliest-visual {
   position: relative;
   display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .section-friendliest .friendliest-visual .friendliest-background-image {
   margin-left: auto;
   width: 440px;
   height: 552px;
+  display: block;
+  max-width: 100%;
+  /* overflow: hidden; */
 }
 .section-friendliest .friendliest-visual-text {
   position: absolute;
   bottom: 14px;
-  left: 60px;
+  left: 40px;
   background-color: var(--unique-color);
   height: 208px;
   padding: 24px 30px;
@@ -349,7 +354,7 @@ body {
 
 /* Solar-section */
 .section-solar {
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   display: grid;
   gap: 40px;
 }
@@ -462,7 +467,7 @@ body {
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(3, 1fr);
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   background: rgba(255, 187, 28, 0.05);
 }
 .energy-section .energy-header {
@@ -573,7 +578,7 @@ body {
 
 /* Value-section */
 .values-section {
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -633,7 +638,7 @@ body {
 
 /* CustomerSay-section */
 .customerSay-section {
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -782,7 +787,7 @@ body {
 .site-footer {
   background-color: #283646;
   display: grid;
-  padding: var(--main-padding-xLarge);
+  padding: var(--main-padding);
   color: var(--white-color);
   gap: 54px;
 }
@@ -1713,35 +1718,24 @@ body {
 @media screen and (min-width: 1024px) and (max-width: 1527px) {
   .site-header .site-header-menu {
     padding: var(--nav-padding-large);
-    gap: 69px;
   }
   .hero-section .hero-content {
-    padding: var(--main-padding-large);
+    padding: 0px var(--padding-inline);
   }
   .section-friendliest {
-    padding: var(--main-padding-large);
-    gap: 32.52px;
-  }
-  .section-friendliest .friendliest-content {
-    gap: 25px;
-  }
-  .section-friendliest .friendliest-visual .friendliest-background-image {
-    margin-left: auto;
-    width: 100%;
-    height: 452px;
-  }
-  .section-friendliest .friendliest-visual-text {
-    left: -30px;
-    padding: 20px;
-    gap: 20px;
+    padding: var(--main-padding);
+    gap: 0px;
   }
 
+  .section-friendliest .friendliest-visual-text {
+    left: -30px;
+  }
   .section-power .power-content {
-    padding: var(--main-padding-large);
+    padding: var(--main-padding);
   }
 
   .section-solar {
-    padding: var(--main-padding-large);
+    padding: var(--main-padding);
   }
   .section-solar .solar-header p {
     font-size: 16px;
@@ -1754,7 +1748,7 @@ body {
     width: 100%;
   }
   .energy-section {
-    padding: var(--main-padding-large);
+    padding: var(--main-padding);
     gap: 20px;
   }
   .energy-section .energy-header {
@@ -1789,38 +1783,21 @@ body {
     width: 100%;
   }
   .values-section {
-    padding: var(--main-padding-large);
-  }
-  .values-section .values-card-container .values-card {
-    padding: 20px;
+    padding: var(--main-padding);
   }
 
   .values-section .values-card-container .values-card p {
     width: 100%;
   }
 
-  .customerSay-section {
-    padding: var(--main-padding-large);
-  }
-
   .customerSay-section .customer-contents .customer-content {
     width: 100%;
-    gap: 10px;
   }
   .customerSay-section .customer-contents .customer-content p {
     width: 100%;
   }
-  .customerSay-section .customer-details {
-    padding: 32px;
-  }
+
   .customerSay-section .customer-details p {
     width: 100%;
-  }
-  .site-footer {
-    padding: var(--nav-padding-large);
-    padding-bottom: 20px;
-  }
-  .site-footer .footer-top .footer-info {
-    gap: 30px;
   }
 }
