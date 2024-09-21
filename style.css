@@ -1,18 +1,20 @@
 :root {
-  --main-color: #0b9586; /* nav color */
-  --nav-color: #0a8678;
+  --main-color: #0b9586;
+  --link-color: #0a8678;
   --secondary-color: #3cab90;
   --unique-color: #f5b921;
-  --main-padding: 16px 150px;
+  --box-padding: 16px 150px;
   --fontSize-title: 42px;
   --fontSize-text: 18px;
   --fontSize-title-mobile: 32px;
   --button-color: #2a3334;
   --padding-inline: 150px;
-  --padding-block: 80px;
+  --main-padding-xLarge: 80px 150px;
   --background-card-color: rgba(60, 171, 144, 0.05);
-  --inline-mobile-padding: 12px;
+  --inline-mobile-padding: 22px;
   --block-mobile-padding: 22px;
+  --nav-padding-large: 16px 150px;
+  --main-padding-large: 80px 150px; /* padding for large screens*/
   --gray-color: #475467;
   --white-color: #fff;
   --dark-blue-color: #101828;
@@ -54,13 +56,13 @@ body {
 /* Header */
 .site-header .site-header-menu {
   background-color: var(--main-color);
-  padding: var(--main-padding);
+  padding: var(--box-padding);
   color: var(--white-color);
   font-size: var(--fontSize-text);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  justify-content: space-between;
-  gap: 227px;
+  gap: 96.67px;
   height: fit-content;
   max-height: 86px;
 }
@@ -74,8 +76,10 @@ body {
 
 .site-header .site-header-menu .site-header-nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 1px;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .site-header .site-header-menu .site-header-nav {
@@ -95,12 +99,12 @@ body {
   width: 100%;
 }
 .site-header .site-header-menu .site-header-nav li a:hover {
-  background-color: var(--nav-color);
+  background-color: var(--link-color);
   border-bottom: 3px solid #0000004d;
   font-weight: var(--font-weight-semibold);
 }
 .site-header .site-header-menu .site-header-nav li a:focus {
-  background-color: var(--nav-color);
+  background-color: var(--link-color);
 }
 
 .site-header .site-header-menu .site-header-contact {
@@ -137,7 +141,7 @@ body {
   position: absolute;
   left: 0;
   top: 0px;
-  padding: var(--main-padding);
+  padding: var(--box-padding);
   font-size: var(--fontSize-text);
 }
 .hero-section .hero-slider-div {
@@ -217,7 +221,7 @@ body {
 
 /* Friendliest-section */
 .section-friendliest {
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 72.52px;
@@ -309,15 +313,16 @@ body {
   width: 100%;
   position: relative;
   height: 100%;
+  height: 505px;
 }
 .section-power .power-content {
-  padding: var(--main-padding);
+  padding: 0px var(--padding-inline);
   position: absolute;
   inset: 0px;
-  padding-top: 147px;
   display: flex;
   flex-direction: column;
   align-items: start;
+  justify-content: center;
   gap: 32px;
 }
 
@@ -344,7 +349,7 @@ body {
 
 /* Solar-section */
 .section-solar {
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   display: grid;
   gap: 40px;
 }
@@ -457,7 +462,7 @@ body {
   display: grid;
   gap: 32px;
   grid-template-columns: repeat(3, 1fr);
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   background: rgba(255, 187, 28, 0.05);
 }
 .energy-section .energy-header {
@@ -568,7 +573,7 @@ body {
 
 /* Value-section */
 .values-section {
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -628,7 +633,7 @@ body {
 
 /* CustomerSay-section */
 .customerSay-section {
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -777,7 +782,7 @@ body {
 .site-footer {
   background-color: #283646;
   display: grid;
-  padding: var(--padding-block) var(--padding-inline);
+  padding: var(--main-padding-xLarge);
   color: var(--white-color);
   gap: 54px;
 }
@@ -1484,6 +1489,9 @@ body {
     display: flex;
     gap: 14px;
   }
+  .section-solar .solar-card img {
+    height: 300px;
+  }
   .section-solar .solar-header p {
     width: 100%;
     text-align: left;
@@ -1497,7 +1505,9 @@ body {
     padding: 10px;
     gap: 14px;
   }
-
+  .section-solar .solar-cards-container .solar-card .solar-card-content p {
+    width: 100%;
+  }
   .repairs-section .repairs-background img {
     height: fit-content;
     min-height: 350px;
@@ -1522,7 +1532,6 @@ body {
     font-weight: 400;
     font-size: 16px;
   }
-
   .energy-section {
     display: grid;
     gap: 12px;
@@ -1596,6 +1605,9 @@ body {
   .values-section .values-card-container .values-card {
     padding: 12px;
     gap: 10px;
+  }
+  .values-section .values-card-container .values-card p {
+    width: 100%;
   }
 
   .customerSay-section {
@@ -1695,5 +1707,120 @@ body {
   .site-footer .footer-bottom .footer-links a:last-child {
     padding-inline: 0px;
     border-right: none;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1527px) {
+  .site-header .site-header-menu {
+    padding: var(--nav-padding-large);
+    gap: 69px;
+  }
+  .hero-section .hero-content {
+    padding: var(--main-padding-large);
+  }
+  .section-friendliest {
+    padding: var(--main-padding-large);
+    gap: 32.52px;
+  }
+  .section-friendliest .friendliest-content {
+    gap: 25px;
+  }
+  .section-friendliest .friendliest-visual .friendliest-background-image {
+    margin-left: auto;
+    width: 100%;
+    height: 452px;
+  }
+  .section-friendliest .friendliest-visual-text {
+    left: -30px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .section-power .power-content {
+    padding: var(--main-padding-large);
+  }
+
+  .section-solar {
+    padding: var(--main-padding-large);
+  }
+  .section-solar .solar-header p {
+    font-size: 16px;
+    width: 100%;
+  }
+  .section-solar .solar-cards-container {
+    width: 100%;
+  }
+  .section-solar .solar-cards-container .solar-card .solar-card-content p {
+    width: 100%;
+  }
+  .energy-section {
+    padding: var(--main-padding-large);
+    gap: 20px;
+  }
+  .energy-section .energy-header {
+    width: 100%;
+  }
+  .energy-section .energy-header p {
+    width: 100%;
+  }
+
+  .energy-section .energy-cards-container .energy-card .energy-card-image span {
+    width: 100%;
+  }
+
+  .energy-section .energy-cards-container .energy-card {
+    padding: 20px;
+  }
+
+  .energy-section
+    .energy-cards-container
+    .energy-card
+    .energy-card-content
+    .energy-card-content-text
+    h1 {
+    width: 100%;
+  }
+  .energy-section
+    .energy-cards-container
+    .energy-card
+    .energy-card-content
+    .energy-card-content-text
+    p {
+    width: 100%;
+  }
+  .values-section {
+    padding: var(--main-padding-large);
+  }
+  .values-section .values-card-container .values-card {
+    padding: 20px;
+  }
+
+  .values-section .values-card-container .values-card p {
+    width: 100%;
+  }
+
+  .customerSay-section {
+    padding: var(--main-padding-large);
+  }
+
+  .customerSay-section .customer-contents .customer-content {
+    width: 100%;
+    gap: 10px;
+  }
+  .customerSay-section .customer-contents .customer-content p {
+    width: 100%;
+  }
+  .customerSay-section .customer-details {
+    padding: 32px;
+  }
+  .customerSay-section .customer-details p {
+    width: 100%;
+  }
+  .site-footer {
+    padding: var(--nav-padding-large);
+    padding-bottom: 20px;
+  }
+  .site-footer .footer-top .footer-info {
+    gap: 30px;
   }
 }
