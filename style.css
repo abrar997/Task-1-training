@@ -1440,24 +1440,20 @@ body {
 
   .section-friendliest .friendliest-visual .friendliest-background-image {
     width: 100%;
-    min-height: 450px;
-    object-fit: cover;
+    min-height: 350px;
+    margin-top: 30px;
   }
 
   .section-friendliest .friendliest-visual-text {
     bottom: -74px;
-    left: 0px;
     right: 0px;
     width: 100%;
-    right: 12px;
-    padding: 28px 20px;
+    left: 0px;
     gap: 10px;
     height: fit-content;
     display: flex;
     flex-direction: row;
     align-items: end;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
   }
   .section-power {
     margin-top: 80px;
@@ -1527,7 +1523,7 @@ body {
     text-align: left;
     justify-content: center;
     align-items: start;
-    padding: 24px 12px;
+    padding: 24px 22px;
   }
   .repairs-section .repairs-background .repairs-content h1 {
     font-size: var(--fontSize-title-mobile);
@@ -1714,92 +1710,5 @@ body {
   .site-footer .footer-bottom .footer-links a:last-child {
     padding-inline: 0px;
     border-right: none;
-  }
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1527px) {
-  .site-header .site-header-menu {
-    padding: var(--nav-padding-large);
-  }
-  .hero-section .hero-content {
-    padding: 0px var(--padding-inline);
-  }
-  .section-friendliest {
-    padding: var(--main-padding);
-    gap: 0px;
-  }
-
-  .section-friendliest .friendliest-visual-text {
-    left: -30px;
-  }
-  .section-power .power-content {
-    padding: var(--main-padding);
-  }
-
-  .section-solar {
-    padding: var(--main-padding);
-  }
-  .section-solar .solar-header p {
-    font-size: 16px;
-    width: 100%;
-  }
-  .section-solar .solar-cards-container {
-    width: 100%;
-  }
-  .section-solar .solar-cards-container .solar-card .solar-card-content p {
-    width: 100%;
-  }
-  .energy-section {
-    padding: var(--main-padding);
-    gap: 20px;
-  }
-  .energy-section .energy-header {
-    width: 100%;
-  }
-  .energy-section .energy-header p {
-    width: 100%;
-  }
-
-  .energy-section .energy-cards-container .energy-card .energy-card-image span {
-    width: 100%;
-  }
-
-  .energy-section .energy-cards-container .energy-card {
-    padding: 20px;
-  }
-
-  .energy-section
-    .energy-cards-container
-    .energy-card
-    .energy-card-content
-    .energy-card-content-text
-    h1 {
-    width: 100%;
-  }
-  .energy-section
-    .energy-cards-container
-    .energy-card
-    .energy-card-content
-    .energy-card-content-text
-    p {
-    width: 100%;
-  }
-  .values-section {
-    padding: var(--main-padding);
-  }
-
-  .values-section .values-card-container .values-card p {
-    width: 100%;
-  }
-
-  .customerSay-section .customer-contents .customer-content {
-    width: 100%;
-  }
-  .customerSay-section .customer-contents .customer-content p {
-    width: 100%;
-  }
-
-  .customerSay-section .customer-details p {
-    width: 100%;
   }
 }
