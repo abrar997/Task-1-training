@@ -11,7 +11,7 @@
   --padding-inline: 150px;
   --main-padding: 80px 150px;
   --background-card-color: rgba(60, 171, 144, 0.05);
-  --inline-mobile-padding: 22px;
+  --inline-mobile-padding: 20px;
   --block-mobile-padding: 22px;
   --nav-padding-large: 16px 150px;
   --gray-color: #475467;
@@ -965,6 +965,7 @@ body {
     width: 100%;
     gap: 21px;
     top: 30px;
+    padding: 0px;
     padding: var(--block-mobile-padding) var(--inline-mobile-padding);
   }
   .hero-section .hero-background img {
@@ -1105,10 +1106,9 @@ body {
     padding: 10px;
     gap: 14px;
   }
-
   .repairs-section .repairs-background img {
     height: fit-content;
-    min-height: 320px;
+    min-height: 340px;
   }
   .repairs-section .repairs-background .repairs-content {
     width: 100%;
@@ -1118,7 +1118,7 @@ body {
     text-align: left;
     justify-content: center;
     align-items: start;
-    padding: 8px 12px;
+    padding: 8px 20px;
     height: 100%;
   }
   .repairs-section .repairs-background .repairs-content h1 {
@@ -1148,20 +1148,29 @@ body {
   }
   .energy-section .energy-header p {
     font-size: 16px;
+    width: 100%;
   }
   .energy-section .energy-card-group {
     grid-column: span 1;
+    display: grid;
+    align-items: start;
+    justify-content: start;
+    padding: 0;
   }
   .energy-section .energy-cards-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+    width: 100%;
   }
   .energy-section .energy-cards-container .energy-card {
     padding: 10px;
     gap: 20px;
+  }
+
+  .energy-section .energy-cards-container .energy-card .energy-card-image {
     width: 100%;
   }
-  .energy-section .energy-cards-container .energy-card .energy-card-image {
+  .energy-section .energy-cards-container .energy-card .energy-card-image span {
     width: 100%;
   }
   .energy-section .energy-cards-container .energy-card .energy-card-image span {
