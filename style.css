@@ -1,8 +1,8 @@
 :root {
   --main-color: #0b9586;
-  --link-color: #0a8678;
   --secondary-color: #3cab90;
-  --unique-color: #f5b921;
+  --link-color: #0a8678;
+  --accent-color: #f5b921;
   --box-padding: 16px 150px;
   --fontSize-title: 42px;
   --fontSize-text: 18px;
@@ -13,7 +13,6 @@
   --background-card-color: rgba(60, 171, 144, 0.05);
   --inline-mobile-padding: 20px;
   --block-mobile-padding: 22px;
-  --nav-padding-large: 16px 150px;
   --gray-color: #475467;
   --white-color: #fff;
   --dark-blue-color: #101828;
@@ -135,7 +134,8 @@ body {
 }
 
 .hero-section .hero-content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 81px;
   position: absolute;
   left: 0;
@@ -167,31 +167,31 @@ body {
   height: 3px;
   width: 89.01px;
 }
+.hero-section .hero-text-container {
+  width: 57%;
+}
 .hero-section .hero-text {
   display: grid;
   gap: 24px;
 }
-.hero-section .hero-text h1 {
+.hero-section .hero-text-container .hero-text h1 {
   text-transform: capitalize;
-  /* width: 729px; */
   font-weight: var(--font-weight-bold);
   font-size: 52px;
   line-height: 63px;
-  letter-spacing: 2px;
 }
-.hero-section .hero-text p {
+.hero-section .hero-text-container .hero-text p {
   font-size: 20px;
   color: var(--white-color);
   font-weight: var(--font-weight-bold);
   line-height: 30px;
-  /* width: 680px; */
 }
-.hero-section .hero-content .next-text_buttons {
+.hero-section .hero-content .hero-text_buttons {
   display: flex;
   gap: 15px;
 }
 
-.hero-section .hero-content .next-text_buttons .btn-call {
+.hero-section .hero-content .hero-text_buttons .btn-call {
   background-color: var(--main-color);
   border: none;
   padding: 12px 34px;
@@ -201,12 +201,12 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
-.hero-section .hero-content .next-text_buttons .btn-call:hover {
+.hero-section .hero-content .hero-text_buttons .btn-call:hover {
   opacity: 90%;
 }
 
-.hero-section .hero-content .next-text_buttons .btn-request {
-  background-color: var(--unique-color);
+.hero-section .hero-content .hero-text_buttons .btn-request {
+  background-color: var(--accent-color);
   border: none;
   padding: 12px 34px;
   border-radius: 20px;
@@ -214,7 +214,7 @@ body {
   color: var(--button-color);
   cursor: pointer;
 }
-.hero-section .hero-content .next-text_buttons .btn-request:hover {
+.hero-section .hero-content .hero-text_buttons .btn-request:hover {
   background-color: #f5b921e2;
 }
 
@@ -243,7 +243,6 @@ body {
 .section-friendliest .friendliest-content p {
   font-size: 16px;
   color: var(--gray-color);
-  /* width: 594px; */
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -274,7 +273,6 @@ body {
 
 .section-friendliest .friendliest-visual .friendliest-background-image {
   margin-left: auto;
-  /* width: 440px; */
   height: 552px;
   display: block;
   max-width: 100%;
@@ -283,7 +281,7 @@ body {
   position: absolute;
   bottom: 14px;
   left: 40px;
-  background-color: var(--unique-color);
+  background-color: var(--accent-color);
   height: 208px;
   padding: 24px 30px;
   border-radius: 14px;
@@ -340,7 +338,7 @@ body {
 }
 
 .section-power .power-content button {
-  background-color: var(--unique-color);
+  background-color: var(--accent-color);
   border: none;
   padding: 12px 34px 12px 34px;
   font-size: 14px;
@@ -361,6 +359,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  width: 72%;
+  margin: auto;
 }
 .section-solar .solar-header h1 {
   font-size: var(--fontSize-title);
@@ -369,9 +369,7 @@ body {
   color: var(--gray-color);
   font-size: 16px;
   line-height: 24px;
-  /* width: 936px; */
   text-align: center;
-  margin: auto;
 }
 .section-solar .solar-cards-container {
   display: grid;
@@ -409,7 +407,6 @@ body {
   line-height: 24px;
   overflow: hidden;
   text-overflow: ellipsis;
-  /* width: 318.67px; */
   height: 72px;
   display: -webkit-inline-box;
   -webkit-line-clamp: 3;
@@ -426,7 +423,6 @@ body {
   height: 100%;
 }
 .repairs-section .repairs-background .repairs-content {
-  /* width: 858px; */
   background: rgba(0, 0, 0, 0.57);
   border-radius: 12px;
   color: var(--white-color);
@@ -453,7 +449,6 @@ body {
   text-transform: capitalize;
 }
 .repairs-section .repairs-background .repairs-content p {
-  /* width: 770px; */
   height: 140px;
   font-weight: var(--font-weight-semibold);
   font-size: 20px;
@@ -474,7 +469,6 @@ body {
   flex-direction: column;
   gap: 20px;
   grid-column: span 1;
-  /* width: 358.67px; */
 }
 
 .energy-section .energy-header h1 {
@@ -484,7 +478,6 @@ body {
   color: var(--dark-blue-color);
 }
 .energy-section .energy-header p {
-  /* width: 358.67px; */
   height: 84px;
   font-family: "Inter";
   font-style: normal;
@@ -525,7 +518,6 @@ body {
   border-radius: 10px;
 }
 .energy-section .energy-cards-container .energy-card .energy-card-image span {
-  /* width: 225px; */
   height: 49px;
   background: url(./assets/images/logo.png);
   mix-blend-mode: luminosity;
@@ -549,7 +541,6 @@ body {
   .energy-card-content
   .energy-card-content-text
   h1 {
-  /* width: 310.67px; */
   font-weight: var(--font-weight-bold);
   font-size: 20px;
   line-height: 30px;
@@ -562,7 +553,6 @@ body {
   .energy-card-content
   .energy-card-content-text
   p {
-  /* width: 310.67px; */
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -632,7 +622,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: var(--gray-color);
-  /* width: 294.67px; */
 }
 
 /* CustomerSay-section */
@@ -652,7 +641,6 @@ body {
   flex-direction: column;
   gap: 28px;
   align-items: start;
-  /* width: 400px; */
 }
 .customerSay-section .customer-contents .customer-content h1 {
   font-weight: 700;
@@ -662,7 +650,6 @@ body {
 }
 
 .customerSay-section .customer-contents .customer-content p {
-  /* width: 400px; */
   font-weight: 400;
   font-size: var(--fontSize-text);
   line-height: 32px;
@@ -725,7 +712,6 @@ body {
   font-size: 24px;
   line-height: 150%;
   color: var(--dark-blue-color);
-  /* width: 516px; */
 }
 .customerSay-section .customer-details .customer-info {
   display: flex;
@@ -995,26 +981,27 @@ body {
   .hero-section .hero-text {
     gap: 12px;
   }
-  .hero-section .hero-text h1 {
+  .hero-section .hero-text-container {
+    width: 100%;
+  }
+  .hero-section .hero-text-container .hero-text h1 {
     font-size: var(--fontSize-title-mobile);
     line-height: 36px;
     letter-spacing: 0px;
-    width: 100%;
   }
-  .hero-section .hero-text p {
+  .hero-section .hero-text-container .hero-text p {
     font-size: var(--fontSize-text);
     font-weight: 400;
-    width: 100%;
   }
-  .hero-section .hero-content .next-text_buttons {
+  .hero-section .hero-content .hero-text_buttons {
     gap: 10px;
   }
-  .hero-section .hero-content .next-text_buttons .btn-call,
+  .hero-section .hero-content .hero-text_buttons .btn-call,
   .btn-request {
     padding: 8px 12px;
     font-size: 14px;
   }
-  .hero-section .hero-content .next-text_buttons .btn-request {
+  .hero-section .hero-content .hero-text_buttons .btn-request {
     padding: 8px 12px;
     font-size: 14px;
   }
@@ -1099,9 +1086,9 @@ body {
     text-align: left;
     display: flex;
     gap: 14px;
+    width: 100%;
   }
   .section-solar .solar-header p {
-    width: 100%;
     text-align: left;
   }
   .section-solar .solar-cards-container {
@@ -1392,27 +1379,28 @@ body {
   .hero-section .hero-text {
     gap: 12px;
   }
-  .hero-section .hero-text h1 {
+  .hero-section .hero-text-container {
+    width: 80%;
+  }
+  .hero-section .hero-text-container .hero-text h1 {
     font-size: var(--fontSize-title-mobile);
     line-height: 36px;
     letter-spacing: 0px;
-    width: 100%;
   }
-  .hero-section .hero-text p {
+  .hero-section .hero-text-container .hero-text p {
     font-size: var(--fontSize-text);
     font-weight: 400;
-    width: 100%;
   }
-  .hero-section .hero-content .next-text_buttons {
+  .hero-section .hero-content .hero-text_buttons {
     gap: 10px;
   }
-  .hero-section .hero-content .next-text_buttons .btn-call,
+  .hero-section .hero-content .hero-text_buttons .btn-call,
   .btn-request {
     padding: 8px 12px;
     font-size: 14px;
   }
 
-  .hero-section .hero-content .next-text_buttons .btn-request {
+  .hero-section .hero-content .hero-text_buttons .btn-request {
     padding: 8px 12px;
     font-size: 14px;
   }
@@ -1497,12 +1485,12 @@ body {
     text-align: left;
     display: flex;
     gap: 14px;
+    width: 100%;
   }
   .section-solar .solar-card img {
     height: 300px;
   }
   .section-solar .solar-header p {
-    width: 100%;
     text-align: left;
   }
   .section-solar .solar-cards-container {
